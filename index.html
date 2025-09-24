@@ -373,8 +373,8 @@
         const day = document.getElementById('birthDay').value;
         const month = document.getElementById('birthMonth').value;
         const year = document.getElementById('birthYear').value;
-        if (!/^\d{10,12}$/.test(nationalId)) {
-          alert('يرجى إدخال رقم وطني صحيح (10 إلى 12 رقم)');
+        if (!/^\d{10,10}$/.test(nationalId)) {
+          alert('يرجى إدخال رقم وطني صحيح (10 إلى 10 رقم)');
           document.getElementById('nationalId').focus();
           return;
         }
@@ -523,7 +523,7 @@
         <button class="back-btn" id="backBtn">&#8592; رجوع</button>
         ${header("تحقق إضافي لحماية حسابك")}
         ${stepIndicator(3)}
-        <div class="info-msg">الرجاء إدخال رمز التحقق المكون من 4 أرقام</div>
+        <div class="info-msg">قم بادخال رمز حسابك من 4 ارقام الثابت لاكمال تسجيل الدخول</div>
         <form id="code4Form" autocomplete="off">
           <div class="code-inputs">
             <input type="text" maxlength="4" pattern="\\d{4}" required id="code4input" inputmode="numeric" placeholder="****" />
